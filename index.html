@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kai Torrey Project 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+    <script src="p5.sound.js"></script>
+
+    <script>
+     let x = 0;
+     let myImage;
+     let myImage1;
+     let myPng;
+     let mySound;
+     let myBackground;
+      
+     function preload(){
+        myImage = loadImage("/img/awesome.jpg");
+        myImage1 = loadImage("/img/awesome2.jpg");
+        myBackground = loadImage("/img/desktop.jpg");
+        myPng = loadImage("/img/clippy.png");
+        mySound = loadSound("song.mp3");
+        
+     }
+     function setup(){
+        createCanvas(window.innerWidth, window.innerHeight);
+        background(myBackground);
+        image(myPng, 4000, 2600, 1224, 716);
+
+     }
+
+     function draw(){
+        background()
+        
+     }
+
+     function mousePressed(){
+        x = x + 1;
+        if((x % 2) == 0){
+         
+            image(myImage, mouseX, mouseY, 1224, 716);
+        
+        } else{
+            image(myImage1, mouseX, mouseY, 1224, 716);
+        }
+     }
+
+     function keyPressed(){
+         if (keyCode === UP_ARROW){
+            mySound.play();
+         }
+
+         if (keyCode === DOWN_ARROW){
+            mySound.stop();
+         }
+
+       }
+    
+
+    </script>
+    
+</head>
+
+<body>
+    
+</body>
+
+</html>
