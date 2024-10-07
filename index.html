@@ -14,7 +14,7 @@
      let myPng;
      let mySound;
      let myBackground;
-        
+      
      function preload(){
         myImage = loadImage("/img/awesome.jpg");
         myImage1 = loadImage("/img/awesome2.jpg");
@@ -26,12 +26,13 @@
      function setup(){
         createCanvas(window.innerWidth, window.innerHeight);
         background(myBackground);
-        image(myPng, 4000, 2600, 1224, 716);
+        image(myPng, 1050, 460, 306, 179);
 
      }
 
      function draw(){
         background()
+        image(myPng, 1050, 460, 306, 179);
         
      }
 
@@ -39,10 +40,10 @@
         x = x + 1;
         if((x % 2) == 0){
          
-            image(myImage, mouseX, mouseY, 1224, 716);
+            image(myImage, mouseX, mouseY, 306, 179);
         
         } else{
-            image(myImage1, mouseX, mouseY, 1224, 716);
+            image(myImage1, mouseX, mouseY, 306, 179);
         }
      }
 
